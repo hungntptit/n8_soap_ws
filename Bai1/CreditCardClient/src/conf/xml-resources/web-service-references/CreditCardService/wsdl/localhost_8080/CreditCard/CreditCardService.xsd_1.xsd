@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><xs:schema xmlns:tns="http://nhom08/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://nhom08/">
+
+<xs:element name="card_charge" type="tns:card_charge" />
+
+<xs:element name="card_chargeResponse" type="tns:card_chargeResponse" />
+
+<xs:element name="hello" type="tns:hello" />
+
+<xs:element name="helloResponse" type="tns:helloResponse" />
+
+<xs:complexType name="hello">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="card_charge">
+<xs:sequence>
+<xs:element name="owner" type="xs:string" minOccurs="0" />
+<xs:element name="card_type" type="xs:string" minOccurs="0" />
+<xs:element name="card_number" type="xs:string" minOccurs="0" />
+<xs:element name="cvc" type="xs:int" />
+<xs:element name="expire_date" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="card_chargeResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:float" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
